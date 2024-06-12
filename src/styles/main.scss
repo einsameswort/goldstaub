@@ -59,7 +59,27 @@ body {
     gap: 0.4rem;
 
     .crafting-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: 1px solid black;
+
+      &__item {
+        width: 2.4rem;
+        height: 2.4rem;
+  
+        &--red {
+          background-color: red;
+        }
+  
+        &--green {
+          background-color: green;
+        }
+  
+        &--blue {
+          background-color: blue;
+        }
+      }
     }
   }
 

@@ -2,15 +2,14 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 
 interface Props {
-  id: number;
   icon: string;
   name: string;
 }
 
-export const Item: React.FC<Props> = ({ id, icon, name }) => {
+export const Item: React.FC<Props> = ({ icon, name }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: 'CRAFTING_ITEM',
-    item: { id },
+    item: { icon },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
