@@ -4,4 +4,5 @@
  */
 export enum AppRoute {
   HOME = '/',
+  NOT_FOUND = '*',
 }
