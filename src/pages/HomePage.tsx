@@ -2,23 +2,25 @@ import React from 'react';
 
 import { DefaultLayout } from '@layouts/DefaultLayout';
 
+import { Item } from '@components/Item';
+
 export const HomePage: React.FC = () => (
   <DefaultLayout>
     <h1>Home</h1>
     <div className="crafting">
       <div className="crafting__items">
-        <div className="crafting__item">
-          <div className="crafting__item__icon crafting__item__icon--red"></div>
-          <p className="crafting__item__name">Item 1</p>
-        </div>
-        <div className="crafting__item">
-          <div className="crafting__item__icon crafting__item__icon--green"></div>
-          <p className="crafting__item__name">Item 2</p>
-        </div>
-        <div className="crafting__item">
-          <div className="crafting__item__icon crafting__item__icon--blue"></div>
-          <p className="crafting__item__name">Item 3</p>
-        </div>
+        <Item
+          icon={<div className="item__icon item__icon--red" />}
+          name="Item 1"
+        />
+        <Item
+          icon={<div className="item__icon item__icon--green" />}
+          name="Item 2"
+        />
+        <Item
+          icon={<div className="item__icon item__icon--blue" />}
+          name="Item 3"
+        />
       </div>
       <div className="crafting__grid">
         <div className="box"></div>
